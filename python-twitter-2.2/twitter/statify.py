@@ -1,6 +1,6 @@
 import twitter
 import cPickle as pickle
-import os.path
+
 # must save necessary keys in separate keys.txt file
 keys = open('statifykeys.txt', 'r')
 key_list = keys.read().splitlines()
