@@ -39,7 +39,8 @@ def statify(user):
 for tweet in mentions_list:
 	tweettxt = tweet.GetText()
 	if "StatifyMe!" in tweettxt:
+		f = open('save.p', 'wb')
+		pickle.dump(tweet.GetId(), f)
+		f.close()
 		statify(tweet.GetUser())
-	f = open('save.p', 'wb')
-	pickle.dump(tweet.GetId(), f)
-	f.close()
+		
